@@ -1,5 +1,4 @@
 import requests
-import json
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
@@ -26,5 +25,4 @@ def weather():
     return jsonify(get_weather(latitude, longitude))
 
 if __name__ == "__main__":
-    print(get_weather("39.768192", "-94.848167"))
     app.run(debug=True, port=4002)
